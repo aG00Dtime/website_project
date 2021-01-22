@@ -1,0 +1,185 @@
+/* modify the entire body of the website*/
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+body {
+	/* to remove the margins around the page so the content sits from end to end of the screen*/
+	margin: 0;
+	/*change the background of the entire page*/
+	background-color: #d1d1d1;
+	font-family: Lato;
+	/*change the fonts that are applied to everything on the webpage*/
+}
+
+/* edit the nav bar*/
+.navigation-bar {
+	/*stretch the navigation from end to end of the screen */
+	width: 100%;
+	/*set the nav bar position to the to the very top of the page*/
+	position: fixed;
+	top: 0%;
+	/*this forces the nav bar to render on the topmost layer of the site so that content doesn't cover it*/
+	z-index: 10;
+	/*overflow hides parts of the bar bar when it is too big to fit onto the screen*/
+	overflow: hidden;
+	/*change the background color of the nav bar*/
+	background-color: rgb(102, 0, 0);
+	/*to add a shadow under the nav bar*/
+	box-shadow: -1px 2px 5px +2px rgba(0, 0, 0, 0.322);
+}
+
+/*change the color of the nav bar elements when you hover over them,in this case everything that is tagged <a> */
+.navigation-bar a:hover {
+	/* this changes the color of the navigation bar links when you hover over them*/
+	color: rgb(255, 255, 255);
+	/* adds a colored box around the link the mouse is over*/
+	background: rgb(0 0 0);
+}
+
+/*change the color and text (names) of the <a> elements in the nav bar*/
+.navigation-bar a {
+	/*makes the elements of the nav bar sit next to each other and depending of what direction you specify,it switches the location and order*/
+	float: left;
+	/*generates the nav bar elements as a block*/
+	display: block;
+	/* changes the text color of the links*/
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	padding: 10px 10px;
+	text-decoration: none;
+	font-size: 16px;
+}
+/*add the logo image to the nav bar*/
+.brand-logo img {
+	display: none;
+	float: right;
+}
+
+/*hightlights the active page open on the nav bar assign the class="active to an element to highlight it when needed*/
+.active {
+	background-color: rgb(0, 0, 0);
+}
+
+/*for the scroll bar styling*/
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: #94949400;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgba(185, 2, 2, 0.733);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(0, 0, 0);
+}
+
+/*these settings are for the default veiw on smaller screens*/
+.page-content {
+	width: 100%;
+}
+.home-page-text {
+	width: 100%;
+}
+
+/*font color for headers and paragraphcs*/
+
+.home-page-text p {
+	font-size: 18px;
+	padding: 20px 30px 10px;
+	line-height: 40px;
+	color: #000000;
+}
+/* formatting all the headers*/
+.search-page h1,
+.contact-us-form h1,
+.home-page-text h1,
+.about-us h1,
+.sent-page h1 {
+	font-size: 40px;
+	padding: 50px 30px 10px;
+	line-height: 40px;
+	text-align: center;
+	color: #000000;
+}
+/*styling the inpput and submit buttons*/
+::placeholder {
+	color: #000000;
+	text-transform: capitalize;
+}
+input[type="text"],
+textarea {
+	width: 100%;
+	padding: 20px;
+	margin: 0;
+	box-sizing: border-box;
+	background-color: #e6e6e6;
+	border-style: solid;
+	border-radius: 5px;
+	resize: vertical;
+	outline: none;
+}
+input[type="text"]:focus,
+textarea:focus {
+	box-shadow: 0 0 5px rgb(34, 34, 34);
+	border: solid rgb(107, 35, 28);
+	border-radius: 5px;
+}
+form {
+	padding: 10px;
+	text-align: center;
+}
+label {
+	font-size: 18px;
+	line-height: 40px;
+	text-align: left;
+	font-weight: bold;
+}
+
+input[type="submit"] {
+	width: 30%;
+	padding: 10px;
+	font-size: 18px;
+	margin: 10px;
+	box-sizing: border-box;
+}
+
+/*serch results*/
+.search-results {
+	padding: 10px;
+}
+
+/*making the website resize according to the screen*/
+@media only screen and (min-width: 600px) {
+	.brand-logo img {
+		display: flex;
+		height: auto;
+		width: auto;
+		max-height: 50px;
+		max-width: 100px;
+		padding: 2px 10px 2px;
+	}
+	.navigation-bar a {
+		/*makes the elements of the nav bar sit next to each other and depending of what direction you specify,it switches the location and order*/
+		font-size: 20px;
+	}
+
+	.page-content {
+		width: 800px;
+		margin: 0 auto;
+	}
+
+	.home-page-text h1 {
+		font-size: 40px;
+		padding: 100px 30px 20px;
+		line-height: 10px;
+	}
+	.home-page-text p {
+		font-size: 20px;
+		padding: 10px 30px 20px;
+		line-height: 1.5;
+	}
+}

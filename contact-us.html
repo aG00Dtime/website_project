@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us</title>
+		<link rel="stylesheet" href="styles/styles.css" />
+	</head>
+	<body>
+		<div class="website-content-container">
+			<div class="navigation-bar">
+				<a href="index.html">Home</a>
+				<a href="search.php">Search</a>
+				<a class="active" href="contact-us.html">Contact Us</a>
+				<a href="about-us.html">About Us</a>
+
+				<div class="brand-logo">
+					<img src="logo/logo.png" alt="" />
+				</div>
+			</div>
+
+			<div class="page-content">
+				<div class="contact-us-form">
+					<form action="submit_form.php" method="POST">
+						<h1>Contact Us</h1>
+						<label for="fullname">Full Name</label>
+						<input
+							type="text"
+							name="fullname"
+							placeholder="enter your full name"
+						/>
+
+						<label for="email">Contact Information</label>
+						<input
+							type="text"
+							name="email"
+							placeholder="enter your email address"
+						/>
+						<input
+							type="text"
+							name="number"
+							placeholder="enter your phone number"
+						/>
+
+						<label for="subject">Subject</label>
+						<input
+							type="text"
+							name="subject"
+							placeholder="enter the subject of your message"
+						/>
+
+						<label for="message">Message</label>
+						<textarea
+							type="text"
+							name="message"
+							rows="5"
+							placeholder="enter your message here"
+						></textarea>
+						<input type="submit" name="submit" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
